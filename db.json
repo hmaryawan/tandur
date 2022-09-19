@@ -1,13 +1,79 @@
 {
+    "tbProvinsi": [
+        {"id": 1, "nama": "Jawa Timur"}
+    ],
+    "tbDaerah": [
+        {"id": 2, "nama": "Kab. Probolinggo", "idProvinsi": 1}
+    ],
+    "tbKecamatan" : [
+        {"id": 3, "nama": "Pakuniran", "idDaerah": 2}
+    ],
+    "tbDesa" : [
+        {"id": 4, "nama": "Rejoso", "idKecamatan": 3}
+    ],
+    "tbPoktan" : [
+        {"id": 1, "nama": "Kelompok Tani Makmur", "idDesa": 4, "ketua": 1}
+    ],
+    "tbAnggota" : [
+        {"id": 1, "tglGabung": "01/09/2022", "idPoktan": 1, "idUser": 1},
+        {"id": 2, "tglGabung": "02/09/2022", "idPoktan": 1, "idUser": 2}
+    ],
+    "tbLahan" : [
+        {"id": 1, "panjang": 200, "lebar": 500, "idAnggota": 1},
+        {"id": 2, "panjang": 400, "lebar": 500, "idAnggota": 2}
+    ],
     "tbUser": [
-        {"id": 1, "title": "Post 1"},
-        {"id": 2, "title": "Post 2"},
-        {"id": 3, "title": "Post 3"}
+        {"id": 1, "userName": "hmaryawan", "email":"hmaryawan@gmail.com", "nohp": "+62 813-3536-4447", "alamat": "Perum Jatiasri", "idDesa": 4},
+        {"id": 2, "userName": "afaqih", "email":"afaqih@gmail.com", "nohp": "+62 822-3046-3714", "alamat": "Dusun Maju, No 5", "idDesa": 4}
     ],
-    "comments": [
-        {"id": 1, "body": "some comment", "postId": 1 },
-        { "id": 2, "body": "some comment", "postId": 1 }
+    
+    "tbTanaman" : [
+        {"id": 1, "nama": "Padi sawah hibrida", "idJnsTanaman": 1, "masaProduksi": 4}
     ],
+    "tbKebutuhan" : [
+        {"id": 1, "idTanaman": 1, "jenis": "Persiapan", "idBarang": 1, "jumlah": 200, "satuan": "Kg"},
+        {"id": 2, "idTanaman": 1, "jenis": "Persiapan", "idBarang": 2, "jumlah": 100, "satuan": "Kg"},
+        {"id": 3, "idTanaman": 1, "jenis": "Benih", "idBarang": 3, "jumlah": 50, "satuan": "Kg"},
+        {"id": 4, "idTanaman": 1, "jenis": "Pupuk", "idBarang": 1, "jumlah": 100, "satuan": "Kg"},
+        {"id": 5, "idTanaman": 1, "jenis": "Pupuk", "idBarang": 2, "jumlah": 50, "satuan": "Kg"},
+        {"id": 6, "idTanaman": 1, "jenis": "Pupuk", "idBarang": 3, "jumlah": 300, "satuan": "Kg"},
+        {"id": 7, "idTanaman": 1, "jenis": "Pupuk", "idBarang": 4, "jumlah": 10, "satuan": "Botol"},
+        {"id": 8, "idTanaman": 1, "jenis": "Pupuk", "idBarang": 5, "jumlah": 10, "satuan": "Botol"},
+        {"id": 9, "idTanaman": 1, "jenis": "Pupuk", "idBarang": 6, "jumlah": 10, "satuan": "Botol"},
+        {"id": 10, "idTanaman": 1, "jenis": "Pestisida", "idBarang": 1, "jumlah": 10, "satuan": "Pack"},
+        {"id": 11, "idTanaman": 1, "jenis": "Pestisida", "idBarang": 2, "jumlah": 10, "satuan": "Pack"}
+    ],
+    "tbJnsTanaman" : [
+        {"id": 1, "nama": "Tanaman Pangan"}
+    ],
+    "tbPersiapan" : [
+        {"id": 1, "nama": "Dolomite"},
+        {"id": 2, "nama": "Zeolite"}
+    ],
+    "tbBenih" : [
+        {"id": 1, "nama": "Sembada 168"},
+        {"id": 2, "nama": "Mapan P-05"},
+        {"id": 3, "nama": "Intani-301"}
+    ],
+    "tbPupuk" : [
+        {"id": 1, "nama": "Urea", "jenisPupuk": "Anorganik"},
+        {"id": 2, "nama": "SP 36", "jenisPupuk": "Anorganik"},
+        {"id": 3, "nama": "Phonska", "jenisPupuk": "Anorganik"},
+        {"id": 4, "nama": "POC Agritech", "jenisPupuk": "Organik dan ZPT"},
+        {"id": 5, "nama": "POP Mosa Gold", "jenisPupuk": "Organik dan ZPT"},
+        {"id": 6, "nama": "Hormon Organik HORTECH", "jenisPupuk": "Organik dan ZPT"}
+    ],
+    "tbPestisida" : [
+        {"id": 1, "nama": "Agens Hayati BIO SPF"},
+        {"id": 2, "nama": "Agens Hayati Top BN"}
+    ],
+    
+    "tbPolaTanam" : [
+        {"id": 1, "idLahan": 1, "idTanaman": 1, "bulanMulai": 1 },
+        {"id": 2, "idLahan": 1, "idTanaman": 1, "bulanMulai": 5 },
+        {"id": 3, "idLahan": 1, "idTanaman": 1, "bulanMulai": 9 }
+    ],
+
     "profile": { 
         "name": "tandur",
         "description": "Tandur (Tani Makmur) project for farmers",
